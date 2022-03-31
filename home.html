@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Formulario de contacto</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="Script.js"></script>
+</head>
+<body>
+    <div class="contact_form">
+
+        <div class="formulario">
+            <h1>Formulario de contacto</h1>
+
+            <form name="formu" onsubmit="validarMsj(); return false;" method="post">
+
+
+                <p>
+                    <label for="nombre" class="colocar_nombre">
+                        Nombre
+                        <span class="obligatorio">*</span>
+                    </label>
+                    <input type="text" name="introducir_nombre" id="nombre" placeholder="Escribe tu nombre">
+                </p>
+
+                <p>
+                    <label for="apellido" class="colocar_apellido">
+                        Apellido
+                        <span class="obligatorio">*</span>
+                    </label>
+                    <input type="text" name="introducir_apellido" id="apellido" placeholder="Escribe tu apellido">
+                </p>
+
+                <p>
+                    <label for="email" class="colocar_email">
+                        Email
+                        <span class="obligatorio">*</span>
+                    </label>
+                    <input type="email" name="introducir_email" id="email" placeholder="Escribe tu Email">
+                </p>
+
+                <p>
+                    <label for="telefone" class="colocar_telefono">
+                        Telefono
+                    </label>
+                    <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu telefono">
+                </p>
+
+                <p>
+                    <label for="tipocontacto">Tipo de Contacto</label>
+                    <select id="tipocontacto" name="tipocontacto">
+                        <option value="soporte">Soporte</option>
+                        <option value="ventas">Ventas</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="asunto" class="colocar_asunto">
+                        Asunto
+                        <span class="obligatorio">*</span>
+                    </label>
+                    <input type="text" name="introducir_asunto" id="asunto" placeholder="Escribe el asunto">
+                </p>
+
+                <p>
+                    <label for="mensaje" class="colocar_mensaje">
+                        Mensaje
+                        <span class="obligatorio">*</span>
+                    </label>
+                    <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" placeholder="Deja aquí tu comentario..."></textarea>
+                </p>
+                <div class="warning" id="Cam_obligatorio"></div>
+                <div id="Msj"></div>
+
+                <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
+
+                <p class="aviso">
+                    <span class="obligatorio"> * </span>los campos son obligatorios.
+                </p>
+
+            </form>
+        </div>
+    </div>
+
+</body>
+
+
+</html>
